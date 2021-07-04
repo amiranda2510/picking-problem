@@ -1,29 +1,29 @@
+# frozen_string_literal: true
+
 require 'get_recommendations'
 
 RSpec.describe GetRecommendations do
-
-  it "scenario 1" do
-    result = GetRecommendations::start("spec/scenario1.json")
+  it 'scenario 1' do
+    result = GetRecommendations.start('spec/scenario1.json')
     expect(result.length).to equal(1)
-    expect(result).to match_array([345048])
+    expect(result).to match_array([345_048])
   end
 
-  it "scenario 2" do
-    result = GetRecommendations::start("spec/scenario2.json")
+  it 'scenario 2' do
+    result = GetRecommendations.start('spec/scenario2.json')
     expect(result.length).to equal(4)
-    expect(result).to match_array([790952, 103678, 788138, 802358])
+    expect(result).to match_array([790_952, 103_678, 788_138, 802_358])
   end
 
-  it "scenario 3" do
-    result = GetRecommendations::start("spec/scenario3.json")
+  it 'scenario 3' do
+    result = GetRecommendations.start('spec/scenario3.json')
     expect(result.length).to equal(4)
-    expect(result).to match_array([103678, 790952, 802358, 788138])
+    expect(result).to match_array([103_678, 790_952, 802_358, 788_138])
   end
 
-  it "scenario 4" do
-    result = GetRecommendations::start("spec/scenario4.json")
+  it 'scenario 4' do
+    result = GetRecommendations.start('spec/scenario4.json')
     expect(result.length).to equal(4)
-    expect(result).to match_array([790952, 103678, 802358, 562873])
+    expect(result).to match_array([790_952, 103_678, 802_358, 562_873])
   end
-
 end
